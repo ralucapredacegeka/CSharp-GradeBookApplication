@@ -18,15 +18,14 @@ namespace GradeBook.GradeBooks
             }
 
             var grades = new List<double>();
+            grades.Add(averageGrade);
 
             foreach (var student in Students)
             {
                 grades.Add(student.AverageGrade);
             }
 
-            grades.Add(averageGrade);
             grades.Sort();
-
             int position = grades.IndexOf(averageGrade) % 5;
 
             switch (position)
